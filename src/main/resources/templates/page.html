@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ka" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/fav.ico" th:href="@{/images/fav.ico}"/>
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+
+<body>
+
+<div class="page-wrap">
+    <div class="img">
+        <img src="../static/images/main.jpg" th:src="@{/images/main.jpg}" alt="">
+    </div>
+
+    <div class="cont">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-6">
+                    <div class="info">
+                        <a href="https://meamacoffee.com/ka/" target="_blank" class="logo"><img
+                                src="../static/images/logo.svg" th:src="@{/images/logo.svg}" alt=""></a>
+<!--                        <h1>უნიკალური გამოცდილება<br>მეამას ქარხანაში</h1>-->
+                        <h1>მეამას ახალი არომატები</h1>
+                        <div class="text">
+                            შენ ერთ-ერთი პირველი მომხმარებელი ხარ, ვინც ახალი გემოები დააგემოვნა.
+                            <br><br>გაგვიზიარე შენი აზრი!
+
+
+<!--                            სპეციალურად შენთვის განსაკუთრებული საჩუქარი მოვამზადეთ და გთავაზობთ საინტერესო ტურს მეამას-->
+<!--                            ქარხანაში.-->
+<!--                            <br><br>შენი თვალით ნახე, როგორ ხდება ინოვაციური მეთოდების დანერგვა საქართველოში და როგორია-->
+<!--                            მსოფლიოში აღიარებული უნიკალური სამუშაო სივრცე.-->
+<!--                            <br><br>Შეავსე ფორმა და გვეწვიე მეამაში!-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="form-box">
+                        <div id="formId" class="row">
+                            <div class="col-12">
+                                <label for="nameSurname">სახელი, გვარი</label>
+                                <input type="text" name="" class="input-field" id="nameSurname">
+                            </div>
+                            <!--                            <div class="col-12">-->
+                            <!--                                <label for="company">კომენტარი</label>-->
+                            <!--                                <input type="text" name="" class="input-field" id="company">-->
+                            <!--                            </div>-->
+                            <div class="col-12">
+                                <label for="comment">შეფასება</label>
+                                <textarea name="" class="input-field" id="comment" style="height: 100%"></textarea>
+                            </div>
+
+                            <!--                            <div class="col-12 col-md-6">-->
+                            <!--                                <label for="phone">ტელეფონი</label>-->
+                            <!--                                <input type="number" name="" class="input-field" id="phone">-->
+                            <!--                            </div>-->
+                            <!--                            <div class="col-12 col-md-6">-->
+                            <!--                                <label for="email">ელ. ფოსტა</label>-->
+                            <!--                                <input type="email" name="" class="input-field" id="email">-->
+                            <!--                            </div>-->
+                            <!--                            <div class="col-12">-->
+                            <!--                                <label class="checkbox" for="checkbox">-->
+                            <!--                                    <input type="checkbox" name="checkbox" id="checkbox">-->
+                            <!--                                    <div class="icon"></div>-->
+                            <!--                                    <span>მოვდივარ სტუმართან ერთად</span>-->
+                            <!--                                </label>-->
+                            <!--                            </div>-->
+                            <div class="col-12">
+                                <button type="submit" onclick="saveCustomer()" name="">გაგზავნა</button>
+                            </div>
+                            <div style="display: none" id="errorId" class="col-12">
+                                <div class="error-message">შეცდომა</div>
+                            </div>
+                        </div>
+                        <div class="success-box" style="display: none" id="successId">
+                            <div class="icon"><img src="../static/images/success-img.png"
+                                                   th:src="@{/images/success-img.png}" alt=""></div>
+                            <h3>Მადლობა<br>შეფასებისთვის!</h3>
+                            <p>თქვენი შეფასება ჩვენთვის მნიშვნელოვანია!</p>
+                            <a href="javascript:window.location.reload();" class="back"><img
+                                    src="../static/images/left-arrow.svg" th:src="@{/images/left-arrow.svg}" alt="">ფორმაზე
+                                დაბრუნება</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../static/js/events.js" th:src="@{/js/events.js}"></script>
+<script src="../static/js/custom/custom.js" th:src="@{/js/custom/custom.js}"></script>
+
+</body>
+
+</html>
